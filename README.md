@@ -8,8 +8,8 @@ It doesnt need to be installed and you can execute the jar file in order to use 
 
 ## Built With
 
-*Java it uses Java Swing to build the GUI interface for the users
-*sqlite it uses a light weight database to store data for the users
+Java it uses Java Swing to build the GUI interface for the users
+Sqlite it uses a light weight database to store data for the users
 
 
 
