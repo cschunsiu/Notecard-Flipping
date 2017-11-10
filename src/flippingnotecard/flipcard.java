@@ -14,7 +14,7 @@ import java.util.*;
 public class flipcard {
     private ArrayList<String> indexedMap;
     private HashMap<String, String> listMap;
-    private int counter = 0;
+    public static int counter = 0;
  
     public void setMap(HashMap mapping) {
       this.listMap = mapping;
@@ -29,16 +29,9 @@ public class flipcard {
     }
 
     public int getCounter() {
-      return this.counter;
+      return counter;
     }
 
-    public void setCounter() {
-      this.counter += 1;
-    }
-
-    public void resetCounter() {
-      this.counter = 0;
-    }
 
     public void initRandomListMap() {
       this.indexedMap = new ArrayList(this.listMap.keySet());

@@ -162,7 +162,7 @@ public class view extends javax.swing.JFrame {
     //get to the next result in Random HashMap
     public void nextCard()
     {
-      fc.setCounter();
+      flipcard.counter++;
       ArrayList e = fc.getIndexedMap();
       jProgressBar1.setValue(fc.getCounter() + 1);
       cardTopLabel.setText((String)e.get(fc.getCounter()));
@@ -271,7 +271,7 @@ public class view extends javax.swing.JFrame {
       jScrollPane4.setVisible(false);
       jScrollPane5.setVisible(false);
       courseConfirmPanel.setVisible(false);
-      fc.resetCounter();
+      flipcard.counter = 0;
       cardBottomLabel.setText("");
       cardTopLabel.setText("");
     }
