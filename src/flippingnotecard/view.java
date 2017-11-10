@@ -26,6 +26,7 @@ public class view extends javax.swing.JFrame {
     public view() {
         initComponents();
         setTitle("Flipping Note Card");
+        course.databaseCheck();
         menu();
     }
     
@@ -574,7 +575,7 @@ public class view extends javax.swing.JFrame {
         cardPage.add(cardTopLabel);
         cardTopLabel.setBounds(280, 130, 390, 80);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flippingnotecard/NotecardBack.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/NotecardBack.jpg"))); // NOI18N
         cardPage.add(jLabel1);
         jLabel1.setBounds(210, 90, 500, 300);
 

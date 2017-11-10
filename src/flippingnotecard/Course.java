@@ -18,6 +18,31 @@ public class Course {
   PreparedStatement pst = null;
   PreparedStatement pst2 = null;
   
+  public void databaseCheck(){
+      
+      String sql = "CREATE TABLE IF NOT EXISTS course (\n"
+                + "	courseID integer PRIMARY KEY AUTOINCREMENT,\n"
+                + "	courseName text NOT NULL\n"
+                + ");";
+      
+      String sql2 = "CREATE TABLE IF NOT EXISTS courseList (\n"
+                + "	cardName text,\n"
+                + "	cardAws text,\n"
+                + "	course integer\n"
+                + ");";
+      
+      try{
+        conn = sql_connection.ConnecrDB();
+        pst = conn.prepareStatement(sql);
+        pst.execute();
+        pst2 = conn.prepareStatement(sql2);
+        pst2.execute();
+      }catch(Exception e){
+          System.err.println(e);
+      }
+
+  }
+  
   public ArrayList<String> showCourse()
   {
     String query = "select * from course";

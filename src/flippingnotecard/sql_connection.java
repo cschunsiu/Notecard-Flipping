@@ -16,7 +16,8 @@ public class sql_connection {
     Connection conn = null;
   
   public static Connection ConnecrDB() {
-    try { Class.forName("org.sqlite.JDBC");
+    try { 
+      Class.forName("org.sqlite.JDBC");
       Connection conn = DriverManager.getConnection("jdbc:sqlite:course.sqlite");
       System.out.println("Connected");
       return conn;
